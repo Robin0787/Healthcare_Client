@@ -16,7 +16,7 @@ const HeroSection = () => {
           sx={{
             position: "absolute",
             width: "700px",
-            top: "-110px",
+            top: "-98px",
             left: "-121px",
           }}
         >
@@ -38,13 +38,13 @@ const HeroSection = () => {
         </Typography>
         <Typography
           component="p"
-          sx={{ width: "50%", mt: "20px" }}
+          sx={{ width: "90%", mt: "20px", textAlign: "justify" }}
           color="gray"
           fontSize={"18px"}
         >
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi
           illum officia commodi, iste deserunt laudantium quia ipsum molestias
-          eos exercitationem similique? Iure odit at ullam voluptate.
+          eos exercitationem similique.
         </Typography>
         <Stack
           direction={"row"}
@@ -57,7 +57,61 @@ const HeroSection = () => {
           <Button variant="outlined">Contact Us</Button>
         </Stack>
       </Box>
-      <Box>Right</Box>
+      <Box
+        sx={{
+          p: 1,
+          flex: 1,
+          display: "flex",
+          justifyContent: "center",
+          position: "relative",
+          mt: 0,
+        }}
+      >
+        <Box sx={{ position: "absolute", left: "200px", top: "-30px" }}>
+          <Image src={assets.svgs.arrow} alt="arrow" width={100} height={100} />
+        </Box>
+        <Box sx={{ display: "flex", gap: 2 }}>
+          <Box mt={4}>
+            <Image
+              src={assets.images.doctor1}
+              alt="doctor1"
+              width={240}
+              height={380}
+            />
+          </Box>
+          <Box>
+            <Image
+              src={assets.images.doctor2}
+              alt="doctor1"
+              width={240}
+              height={350}
+            />
+          </Box>
+        </Box>
+        <Box sx={{ position: "absolute", top: "220px", left: "160px" }}>
+          <Image
+            src={assets.images.doctor3}
+            alt="doctor3"
+            width={240}
+            height={240}
+          />
+        </Box>
+        <Box
+          sx={{
+            position: "absolute",
+            bottom: "-50px",
+            right: "0px",
+            zIndex: "-1",
+          }}
+        >
+          <Image
+            src={assets.images.stethoscope}
+            alt="doctor3"
+            width={200}
+            height={200}
+          />
+        </Box>
+      </Box>
     </Container>
   );
 };
