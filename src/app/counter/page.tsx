@@ -1,12 +1,14 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 "use client";
 
 import { decrease, increase } from "@/redux/features/counter/counter-slice";
+import { useGetAllSpecialtiesQuery } from "@/redux/features/specialties/specialties.api";
 import { useAppDispatch } from "@/redux/hooks";
 import { Button } from "@mui/material";
 import { useSelector } from "react-redux";
 
 const Counter = () => {
+  const data = useGetAllSpecialtiesQuery("");
+  console.log(data);
   const dispatch = useAppDispatch();
   const counter = useSelector((rootState: any) => rootState.counter.value);
   const increaseCounter = () => {
