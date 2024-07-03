@@ -11,7 +11,7 @@ const Specialist = async () => {
   const data = await res.json();
   let specialties: Specialty[] = data?.data || [];
   const condition = specialties.length > 0;
-  if (data.length > 4) {
+  if (specialties.length > 4) {
     specialties = specialties.slice(0, 4);
   }
 
@@ -28,7 +28,7 @@ const Specialist = async () => {
         </Box>
         <Stack
           direction="row"
-          justifyContent={"center"}
+          justifyContent={"space-between"}
           alignItems={"center"}
           gap={5}
           mt={5}
